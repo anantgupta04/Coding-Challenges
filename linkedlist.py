@@ -27,8 +27,6 @@ class ListNode(object):
     def reverseRecursively(self, head):
         if head.next == None:
             print('\n!Inside = ', head.val)
-            previous_node = None
-            self.val = head
             return
         self.reverseRecursively(head.next)
         next_node = head.next
