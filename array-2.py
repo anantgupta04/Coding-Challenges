@@ -7,17 +7,32 @@ Follow-up: what if you can't use division?
 '''
 
 
-def check(input_list, prod):
+def division(input_list):
+    prod = 1
+    for i in input_list:
+        prod *= int(i)
     output = [prod // i for i in input_list]
-    print(output)
+    print('Resultant array = ', output)
     return output
 
 
+def division_less(lst):
+    l = len(lst)
+    left_list = [1] * (l + 1)
+    right_list = [1] * (l + 1)
+    output = [1] * l
+    for i in range(1, l + 1):
+        left_list[i] = left_list[i - 1] * lst[i - 1]
+    print('left_list = ', left_list)
+    for i in range(l - 1, -1, -1):
+        right_list[i] = right_list[i + 1] * lst[i]
+    print('right_list = ', right_list)
+    for i in range(1, l + 1):
+        output[i - 1] = left_list[i - 1] * right_list[i]
+    print(output)
+
+
 if __name__ == '__main__':
-    prod = 1
-    n = []
-    for i in input('Enter numbers separated by space: ').split(' '):
-        n.append(int(i))
-        prod *= int(i)
-    print((n), '\t', prod)
-    result = check(n, prod)
+    n = [int(i) for i in input('Enter numbers separated by space: ').split(' ')]
+    result = division(n)
+    result_2 = division_less([2, 3, 2, 5])
