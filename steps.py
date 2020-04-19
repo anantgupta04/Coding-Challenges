@@ -30,8 +30,8 @@ def staircase_nonrecursion(n):
 
 
 if __name__ == '__main__':
-    # print('Non recursion 5 = ',staircase_nonrecursion(5))
-    # print('recursion 4= ',staircase_recursion(4))  # 5
-    # print('recursion 5 = ',staircase_recursion(5))  # 8
-    # print('recursion 35 = ',staircase_recursion(35))
-    print('Non recursion = ', staircase_nonrecursion(35))
+    print('recursion 4= ', staircase_recursion(4))  # 5
+    print('recursion 5 = ', staircase_recursion(5))  # 8
+    print('recursion 35 = ', staircase_recursion(35))
+    print('Non recursion 5 = ', staircase_nonrecursion(5))
+    print('Non recursion = ', staircase_nonrecursion(35))  # to compare the time differnece
